@@ -1,7 +1,7 @@
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 from spotipy import SpotifyClientCredentials
-import pandas
+import pandas as pd
 
 scope="user-library-read,playlist-modify-public,playlist-modify-private"
 
@@ -48,7 +48,7 @@ def get_desired_features(features,desired_features):
 # make a data frame. the rows are the songs, the columns are the features
 
 def dataframe(song_names,features):
-    df = pandas.DataFrame(features,index=song_names)
+    df = pd.DataFrame(features,index=song_names)
     return df
 
 def get_track(sp,id):
@@ -59,16 +59,27 @@ def get_track(sp,id):
 
 def main():
     sp=oauth()
-    ids, song_names = get_tracks_from_playlist(sp,"24bxcpSTAvKvjTgaSHpVg3",9)
-    features = get_features(sp,ids)
-    desired_features = ['danceability', 'energy', 'loudness', 'valence', 'instrumentalness']
-    features = get_desired_features(features,desired_features)
-    track_genre = get_track(sp,ids[1])['artists']
-    # print(song_names)
-    # print(track_genre)
-    print(features)
-    df = dataframe(song_names,features)
-    print(df.describe())
+    playlists = {"nico":"24bxcpSTAvKvjTgaSHpVg3", "gonza":"37i9dQZF1DX7auwRw98d8w", "flori":"19FYmyloEq0UwtyUG0sn26"}
+    features_final = []
+    song_names_final = []
+    for user, playlist in playlists.items():
+        ids, song_names = get_tracks_from_playlist(sp,playlist,20)
+        features = get_features(sp,ids)
+        desired_features = ['danceability', 'energy', 'loudness', 'valence', 'tempo']
+        features = get_desired_features(features,desired_features)
+        features['user'] = [user]*20
+        features_final.append(features)
+        song_names_final.append(song_names)
+    
+    
+    
+
+    
+    
+    df_gonza = dataframe(song_names_final[1],features_final[1])
+    df_nico = dataframe(song_names_final[0],features_final[0])
+    df_flori = dataframe(song_names_final[2],features_final[2])
+    df = pd.concat([df_gonza,df_nico,df_flori])
     # save as csv
     df.to_csv('data.csv')
     
