@@ -1,0 +1,89 @@
+/* add custom font form computer*/
+@font-face {
+    font-family: 'clash-display-regular';
+    src: url('../fonts/ClashDisplay-Regular.otf') format('truetype');
+}
+@font-face {
+    font-family: 'clash-display-medium';
+    src: url('../fonts/ClashDisplay-Medium.otf') format('truetype');
+}
+
+
+body {
+    font-family:'Courier New', Courier, monospace;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #101010;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+
+}
+
+body header h1{
+    font-family: 'clash-display-medium', sans-serif;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+h3 {
+    color: #333;
+}
+
+p {
+   padding: 0 20px;
+}
+
+section {
+    margin: 20px;
+}
+
+.members {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 30px 50px;
+}
+
+.member img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #101010;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: -10;
+}
+
+#visualization {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    border: 1px solid #ccc;
+    /* margin: 20px 0; */
+}

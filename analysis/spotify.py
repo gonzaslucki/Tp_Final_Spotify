@@ -2,12 +2,23 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 from spotipy import SpotifyClientCredentials
 import pandas as pd
+import requests
+
 
 scope="user-library-read,playlist-modify-public,playlist-modify-private"
 
 client_id = '427ea87c788e4dbc9c18c105795764a8'
 client_secret = 'c5ceba11570e452ba4005d3d791c4b0f'
-redirect_uri = 'http://localhost:8501/'
+redirect_uri = 'http://localhost:5000/'
+
+def get_token():
+    url = 'https://accounts.spotify.com/api/token'
+    headers = {'Content-Type': 'application/x-www-form-urlencoded'}
+    body = {'grant_type':'client_credentials','client_id':client_id,'client_secret':client_secret}
+    r = requests.post(url, headers=headers, data=body)
+    token = r.json()['access_token']
+    return token
+
 
 
 def oauth():
@@ -72,16 +83,13 @@ def main():
         song_names_final.append(song_names)
     
     
-    
-
-    
-    
     df_gonza = dataframe(song_names_final[1],features_final[1])
     df_nico = dataframe(song_names_final[0],features_final[0])
     df_flori = dataframe(song_names_final[2],features_final[2])
     df = pd.concat([df_gonza,df_nico,df_flori])
+    print(df)
     # save as csv
-    df.to_csv('data.csv')
+    df.to_csv('../data/data.csv')
     
 
 
