@@ -76,7 +76,7 @@ def main():
     for user, playlist in playlists.items():
         ids, song_names = get_tracks_from_playlist(sp,playlist,20)
         features = get_features(sp,ids)
-        desired_features = ['danceability', 'energy', 'loudness', 'valence', 'tempo']
+        desired_features = ['danceability', 'energy', 'loudness', 'valence', 'speechiness']
         features = get_desired_features(features,desired_features)
         features['user'] = [user]*20
         features_final.append(features)
@@ -89,7 +89,7 @@ def main():
     df = pd.concat([df_gonza,df_nico,df_flori])
     print(df)
     # save as csv
-    df.to_csv('../data/data.csv')
+    df.to_csv('data.csv')
     
 
 

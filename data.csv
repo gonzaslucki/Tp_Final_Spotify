@@ -1,0 +1,61 @@
+song,danceability,energy,loudness,valence,speechiness,user
+"Peso Pluma: Bzrp Music Sessions, Vol. 55",0.854,0.668,-7.848,0.805,0.0466,gonza
+"L-Gante: Bzrp Music Sessions, Vol.38",0.553,0.819,-3.083,0.761,0.257,gonza
+"Villano Antillano: Bzrp Music Sessions, Vol. 51",0.82,0.752,-7.635,0.423,0.0648,gonza
+"Quevedo: Bzrp Music Sessions, Vol. 52",0.621,0.782,-5.548,0.55,0.044,gonza
+"Nathy Peluso: Bzrp Music Sessions, Vol. 36",0.65,0.655,-3.71,0.735,0.405,gonza
+"Snow Tha Product: Bzrp Music Sessions, Vol. 39",0.829,0.748,-5.361,0.529,0.176,gonza
+"Nicky Jam: Bzrp Music Sessions, Vol. 41",0.627,0.849,-3.167,0.818,0.153,gonza
+"Nicki Nicole: Bzrp Music Sessions, Vol. 13",0.81,0.471,-5.047,0.391,0.0496,gonza
+"Tiago PZK: Bzrp Music Sessions, Vol. 48",0.657,0.821,-3.06,0.752,0.32,gonza
+"Arcángel: Bzrp Music Sessions, Vol. 54",0.716,0.78,-3.495,0.786,0.297,gonza
+"Ptazeta: Bzrp Music Sessions, Vol. 45",0.829,0.81,-4.801,0.707,0.144,gonza
+"Eladio Carrion: Bzrp Music Sessions, Vol. 40",0.783,0.524,-6.455,0.839,0.0554,gonza
+"Paulo Londra: Bzrp Music Sessions, Vol. 23",0.527,0.91,-2.659,0.329,0.122,gonza
+"Duki: Bzrp Music Sessions, Vol. 50",0.535,0.874,-2.248,0.323,0.137,gonza
+"Dani Ribba: Bzrp Music Sessions, Vol. 24",0.914,0.689,-7.743,0.852,0.348,gonza
+"Morad: Bzrp Music Sessions, Vol. 47",0.77,0.859,-4.526,0.548,0.0429,gonza
+"Trueno: Bzrp Freestyle Sessions, Vol. 6",0.778,0.739,-5.453,0.496,0.285,gonza
+"Aleman: Bzrp Music Sessions, Vol. 15",0.813,0.884,-4.817,0.646,0.119,gonza
+Quédate - Tiësto Remix,0.652,0.877,-2.767,0.722,0.141,gonza
+"Residente: Bzrp Music Sessions, Vol. 49",0.586,0.74,-2.997,0.697,0.404,gonza
+Sleepless - Stephan Bodzin Remix,0.742,0.662,-8.149,0.0845,0.0462,nico
+Be Someone,0.672,0.788,-8.393,0.356,0.0398,nico
+Icarus,0.53,0.926,-7.496,0.0315,0.0369,nico
+Come Together,0.306,0.851,-10.907,0.0392,0.056,nico
+Hold Me Close - Vintage Culture Remix,0.612,0.774,-7.538,0.287,0.0469,nico
+Next to Me - Vintage Culture Remix,0.548,0.846,-7.534,0.109,0.0295,nico
+Breathe,0.595,0.877,-7.414,0.081,0.0442,nico
+Inner Light,0.651,0.709,-7.842,0.126,0.037,nico
+I Want You (feat. braev),0.404,0.674,-9.056,0.0364,0.0469,nico
+I’ll Find My Way To You,0.795,0.474,-8.166,0.477,0.0642,nico
+Spektrum (feat. Ali Love),0.535,0.707,-7.055,0.0347,0.0489,nico
+Collider,0.8,0.626,-11.735,0.335,0.0574,nico
+Cappadocia,0.349,0.685,-9.281,0.277,0.0421,nico
+Abu Simbel,0.443,0.705,-8.673,0.073,0.0335,nico
+Waiting,0.701,0.758,-9.247,0.249,0.0461,nico
+Water (feat. ZOHARA),0.567,0.738,-6.03,0.432,0.154,nico
+You & Me - Flume Remix,0.593,0.392,-6.872,0.25,0.0257,nico
+Human (feat. Echoes),0.544,0.856,-6.84,0.233,0.0314,nico
+The Future (with James Vincent McMorrow),0.553,0.72,-5.003,0.416,0.053,nico
+Paralyzed,0.632,0.724,-6.972,0.27,0.0326,nico
+"Neon - Live at the Nokia Theatre, Los Angeles, CA - December 2007",0.435,0.548,-12.525,0.497,0.0786,flori
+"Slow Dancing in a Burning Room - Live at the Nokia Theatre, Los Angeles, CA - December 2007",0.514,0.536,-7.13,0.453,0.0287,flori
+"I Don't Need No Doctor - Live at the Nokia Theatre, Los Angeles, CA - December 2007",0.25,0.903,-4.772,0.57,0.0809,flori
+"Belief - Live at the Nokia Theatre, Los Angeles, CA - December 2007",0.592,0.894,-6.078,0.387,0.0627,flori
+"Layla - Acoustic; Live at MTV Unplugged, Bray Film Studios, Windsor, England, UK, 1/16/1992; 2013 Remaster",0.558,0.524,-11.626,0.636,0.0459,flori
+Cocaine,0.699,0.502,-12.526,0.676,0.0278,flori
+Purple Haze,0.533,0.905,-5.27,0.486,0.0754,flori
+Hey Joe,0.346,0.768,-5.695,0.532,0.0377,flori
+Little Wing,0.515,0.534,-8.045,0.426,0.0768,flori
+Do I Wanna Know?,0.548,0.532,-7.596,0.405,0.0323,flori
+Fluorescent Adolescent,0.654,0.828,-5.377,0.79,0.0281,flori
+Heart-Shaped Box,0.256,0.641,-10.283,0.382,0.0552,flori
+Little Wing,0.475,0.383,-14.202,0.524,0.0375,flori
+Voodoo Child (Slight Return),0.214,0.91,-6.662,0.448,0.389,flori
+Layla,0.408,0.801,-6.648,0.262,0.0616,flori
+I Shot The Sheriff,0.73,0.639,-11.025,0.658,0.0524,flori
+Black Dog - Remaster,0.437,0.864,-7.842,0.749,0.0904,flori
+"Tears in Heaven - Acoustic; Live at MTV Unplugged, Bray Film Studios, Windsor, England, UK, 1/16/1992; 2013 Remaster",0.695,0.336,-12.999,0.422,0.0313,flori
+Earth Blues,0.632,0.76,-7.747,0.747,0.035,flori
+Fly Away,0.587,0.872,-5.066,0.735,0.0484,flori
