@@ -76,7 +76,9 @@ function draw(chart, nodos) {
         .append('circle')
         .attr('r', d => radio(+d.danceability))
         .style('fill', (d, i) => color(d.user))
-        .style('fill-opacity', d => opacidad(d.loudness))
+        .style('fill-opacity', d => opacidad(d.loudness)/1.1)
+        .style('stroke', d=> color(d.user)) // added stroke color
+        .style('stroke-width', '3px') // added stroke width
         .on("mouseover", function(event, d) {
             console.log(d);
             // Tooltip
