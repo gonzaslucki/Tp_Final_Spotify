@@ -5,7 +5,9 @@ function RadarChart(id, data) {
     const width = Math.min(700, window.innerWidth - 10) - margin.left - margin.right;
     const height = Math.min(width, window.innerHeight - margin.top - margin.bottom - 20);
 
-    const color = d3.scaleOrdinal().range(["blue", "green", "red"]);
+    const color = d3.scaleOrdinal()
+    // .domain(['gonza', 'nico', 'flori'])
+    .range(["blue", "green", "red"]);
 
     const options = {
         w: width,
@@ -137,7 +139,6 @@ function RadarChart(id, data) {
     if (cfg.roundStrokes) {
         radarLine.curve(d3.curveCardinalClosed);
     }
-
     const blobWrapper = g.selectAll(".radarWrapper").data(data).enter().append("g").attr("class", "radarWrapper");
 
     blobWrapper

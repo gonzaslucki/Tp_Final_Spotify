@@ -72,12 +72,12 @@ function draw(chart, nodos) {
         .style('stroke', d => color(d.user)) 
         .style('stroke-width', d => strokeWidth(d.valence) + 'px') // updated this line
         .on("mouseover", function(event, d) {
-            d3.select(this).style('fill-opacity',  d => opacidad(d.energy)*2); // change opacity to full
+            d3.select(this).style('fill-opacity',  d => opacidad(d.energy)+0.4); // change opacity to full
             console.log(d);
             tooltip.transition()
                 .duration(200)
                 .style("opacity", .9);
-            tooltip.html(d.song + '<br/>' + '<br/>' + 'Danceability:' + d.danceability + '<br/>' + 'Energy:' + d.energy )
+            tooltip.html(d.song + '<br/>' + '<br/>' + 'Danceability:' + d.danceability + '<br/>' + 'Energy:' + d.energy + '<br/>' + 'Valence:' + d.valence)
                 .style("left", (event.pageX) + "px")
                 .style("top", (event.pageY - 28) + "px");
         })
