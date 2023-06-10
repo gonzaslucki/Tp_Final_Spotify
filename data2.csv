@@ -1,0 +1,61 @@
+song,danceability,energy,loudness,valence,speechiness,user
+Un Poco de Amor Francés,0.532,0.776,-7.873,0.667,0.03,gonza
+De Música Ligera - Remasterizado 2007,0.537,0.749,-6.336,0.735,0.0284,gonza
+Campanas en la Noche,0.636,0.593,-5.181,0.742,0.0567,gonza
+Reyes de la Noche,0.512,0.845,-3.164,0.659,0.0381,gonza
+Nunca quise,0.709,0.787,-6.3,0.874,0.0279,gonza
+Los 90's,0.388,0.898,-4.077,0.7,0.0383,gonza
+La Soledad,0.63,0.679,-4.423,0.774,0.0392,gonza
+Arde la ciudad,0.569,0.9,-3.74,0.834,0.0307,gonza
+Como me cuesta decir que no,0.421,0.687,-5.709,0.473,0.0308,gonza
+9 de Julio,0.624,0.842,-4.098,0.929,0.0361,gonza
+Un Dia Perfecto,0.462,0.902,-4.059,0.718,0.0649,gonza
+Don,0.824,0.738,-5.431,0.961,0.0867,gonza
+Deja Vu,0.491,0.863,-7.573,0.271,0.0365,gonza
+Me Gustas Mucho,0.556,0.601,-7.511,0.605,0.0336,gonza
+Que Ves?,0.725,0.565,-8.626,0.714,0.136,gonza
+Perfecta,0.648,0.727,-5.45,0.839,0.0361,gonza
+Mirenla,0.632,0.726,-6.357,0.802,0.027,gonza
+Lunes Por La Madrugada,0.604,0.594,-11.517,0.527,0.0309,gonza
+Descontrolado,0.569,0.809,-5.069,0.772,0.0265,gonza
+A las Nueve,0.624,0.803,-5.688,0.825,0.0262,gonza
+Dance With Me,0.792,0.704,-7.181,0.472,0.0631,nico
+Home,0.612,0.767,-5.972,0.0458,0.0317,nico
+Variant,0.761,0.824,-5.823,0.0566,0.0453,nico
+Pantheon,0.585,0.673,-8.274,0.0389,0.0342,nico
+Welcome To The Opera (with Grimes),0.455,0.897,-6.345,0.0578,0.0507,nico
+Transmission - Joris Voorn Remix,0.711,0.838,-7.985,0.223,0.0423,nico
+Criseide,0.739,0.656,-9.457,0.0415,0.0464,nico
+Tibet,0.729,0.919,-8.763,0.0382,0.0855,nico
+Aylyak,0.578,0.901,-5.214,0.106,0.0331,nico
+Tataki,0.826,0.401,-11.684,0.0561,0.117,nico
+Follow the Stars,0.736,0.802,-6.367,0.158,0.0477,nico
+Explore Your Future,0.716,0.881,-7.027,0.293,0.0536,nico
+Kurai,0.584,0.943,-4.204,0.0833,0.0427,nico
+My City's On Fire - Anyma & Cassian Remix,0.611,0.777,-6.599,0.31,0.043,nico
+Head Over - Diode Eins & David Hasert Remix,0.703,0.804,-6.077,0.355,0.0585,nico
+Turn On The Lights again.. (feat. Future) - Anyma Remix,0.683,0.825,-6.175,0.0451,0.0424,nico
+Solid Breaker,0.721,0.788,-5.412,0.261,0.0359,nico
+The Mirage,0.724,0.866,-7.028,0.525,0.0448,nico
+More Coke!!,0.624,0.559,-8.287,0.0842,0.029,nico
+Point Of No Return,0.555,0.918,-10.394,0.1,0.034,nico
+Solitude,0.462,0.15,-13.531,0.19,0.0522,flori
+Dream A Little Dream Of Me - Single Version,0.443,0.104,-17.042,0.394,0.101,flori
+Fly Me To The Moon,0.67,0.365,-10.158,0.45,0.0564,flori
+La vie en rose - Single Version,0.52,0.0406,-16.397,0.285,0.0635,flori
+The Girl From Ipanema,0.653,0.149,-17.866,0.481,0.0392,flori
+I Fall In Love Too Easily,0.532,0.0657,-19.136,0.292,0.0406,flori
+In A Sentimental Mood,0.464,0.305,-12.435,0.282,0.0316,flori
+Blue in Green (feat. John Coltrane & Bill Evans),0.421,0.0162,-25.358,0.154,0.0388,flori
+Take Five,0.454,0.26,-13.193,0.598,0.0401,flori
+I'll Be Seeing You,0.355,0.0304,-20.479,0.188,0.0361,flori
+Cheek To Cheek,0.663,0.264,-14.571,0.657,0.0914,flori
+What A Wonderful World,0.271,0.165,-20.652,0.203,0.0351,flori
+Stormy Weather,0.262,0.356,-8.031,0.426,0.0303,flori
+Corcovado (Quiet Nights Of Quiet Stars),0.52,0.132,-17.857,0.377,0.0478,flori
+Unforgettable,0.349,0.182,-13.507,0.178,0.031,flori
+Blue Moon,0.639,0.269,-11.435,0.539,0.0698,flori
+My Baby Just Cares for Me - 2013 Remastered Version,0.746,0.243,-15.134,0.425,0.123,flori
+"So What (feat. John Coltrane, Cannonball Adderley & Bill Evans)",0.532,0.151,-17.266,0.211,0.0376,flori
+My Funny Valentine,0.438,0.00756,-26.44,0.277,0.0382,flori
+In the Mood - Live,0.463,0.654,-9.72,0.592,0.0659,flori

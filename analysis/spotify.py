@@ -70,13 +70,13 @@ def get_track(sp,id):
 
 def main():
     sp=oauth()
-    playlists = {"nico":"24bxcpSTAvKvjTgaSHpVg3", "gonza":"37i9dQZF1DX7auwRw98d8w", "flori":"19FYmyloEq0UwtyUG0sn26"}
+    playlists = {"nico":"37i9dQZF1DX9gPDOAK0Yqv", "gonza":"42RzknAZ7lkhLhl057N86v", "flori":"37i9dQZF1DXbITWG1ZJKYt"}
     features_final = []
     song_names_final = []
     for user, playlist in playlists.items():
         ids, song_names = get_tracks_from_playlist(sp,playlist,20)
         features = get_features(sp,ids)
-        desired_features = ['danceability', 'energy', 'loudness', 'valence', 'speechiness']
+        desired_features = ['danceability', 'energy', 'loudness', 'valence', 'tempo']
         features = get_desired_features(features,desired_features)
         features['user'] = [user]*20
         features_final.append(features)
@@ -89,7 +89,7 @@ def main():
     df = pd.concat([df_gonza,df_nico,df_flori])
     print(df)
     # save as csv
-    df.to_csv('data.csv')
+    df.to_csv('data3.csv')
     
 
 

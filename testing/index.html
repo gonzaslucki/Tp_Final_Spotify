@@ -54,41 +54,20 @@
 			////////////////////////// Data ////////////////////////////// 
 			////////////////////////////////////////////////////////////// 
 
-			var data = 
-            [[{'axis': 'danceability', 'value': 2}, {'axis': 'energy', 'value': 0.6839999999999999}, {'axis': 'loudness', 'value': 0.14092833333333335}, {'axis': 'valence', 'value': 0.53925}, {'axis': 'speechiness', 'value': 0.068785}], [{'axis': 'danceability', 'value': 0.7162}, {'axis': 'energy', 'value': 0.76255}, {'axis': 'loudness', 'value': 0.07701666666666668}, {'axis': 'valence', 'value': 0.63545}, {'axis': 'speechiness', 'value': 0.180565}], [{'axis': 'danceability', 'value': 0.5786}, {'axis': 'energy', 'value': 0.7246}, {'axis': 'loudness', 'value': 0.1335025}, {'axis': 'valence', 'value': 0.20986500000000002}, {'axis': 'speechiness', 'value': 0.048615}]]
-            // [
-			// 		  [//iPhone
-			// 			{axis:"Danceability",value:0.22},
-			// 			{axis:"Energy",value:0.28},
-			// 			{axis:"loudness",value:0.29},
-			// 			{axis:"Valence",value:0.17},
-			// 			{axis:"Tempo",value:1},		
-			// 		  ],[//Samsung
-            //           {axis:"Danceability",value:0.20},
-			// 			{axis:"Energy",value:0.40},
-			// 			{axis:"loudness",value:0.78},
-			// 			{axis:"Valence",value:0.10},
-			// 			{axis:"Tempo",value:0.5}
-			// 		  ],[//Nokia Smartphone
-            //           {axis:"Danceability",value:0.50},
-			// 			{axis:"Energy",value:0.30},
-			// 			{axis:"loudness",value:0.19},
-			// 			{axis:"Valence",value:0.40},
-			// 			{axis:"Tempo",value:0.5}
-			// 		  ]
-			// 		];
+			var data = [[{'axis': 'danceability', 'value': 0.49285000000000007}, {'axis': 'energy', 'value': 0.195473}, {'axis': 'loudness', 'value': 0.4480838632067366}, {'axis': 'valence', 'value': 0.35995}, {'axis': 'tempo', 'value': 0.4303185979684576}], [{'axis': 'danceability', 'value': 0.58465}, {'axis': 'energy', 'value': 0.7542}, {'axis': 'loudness', 'value': 0.882063069255886}, {'axis': 'valence', 'value': 0.72105}, {'axis': 'tempo', 'value': 0.5813314454691259}], [{'axis': 'danceability', 'value': 0.67225}, {'axis': 'energy', 'value': 0.78715}, {'axis': 'loudness', 'value': 0.8260268087300224}, {'axis': 'valence', 'value': 0.16752499999999998}, {'axis': 'tempo', 'value': 0.44789620088211707}]]
+    
 			////////////////////////////////////////////////////////////// 
 			//////////////////// Draw the Chart ////////////////////////// 
 			////////////////////////////////////////////////////////////// 
 
 			var color = d3.scale.ordinal()
-				.range(["#EDC951","#CC333F","#00A0B0"]);
+				.range(["blue","green","red"]);
 				
 			var radarChartOptions = {
 			  w: width,
 			  h: height,
 			  margin: margin,
-			  maxValue: 0.5,
+			  maxValue: 1,
 			  levels: 5,
 			  roundStrokes: true,
 			  color: color

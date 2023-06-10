@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto Final Integrador - Spotify: Ensayo visual con datos</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="https://d3js.org/d3.v6.js"></script>
-    <script src="script.js"></script>
+    <script src="https://d3js.org/d3.v7.js"></script>
+    <script src="cluster.js"></script>
+    <script src="radarChart.js"></script>
+    
 </head>
 <body>
     <header>
@@ -40,7 +42,14 @@
             <button onclick="update('gonza')">Gonza</button>
             <button onclick="update('todos')">Todos</button>
           </div>
-        <div id="visualization" style="width: 100%; height: 100%;"></div>
+    <div id="visualization" style="width: 100%; height: 100%;"></div>
+    <div class="radarChart"></div>
+    <script>
+			var data = [[{'axis': 'danceability', 'value': 0.49285000000000007}, {'axis': 'energy', 'value': 0.195473}, {'axis': 'loudness', 'value': 0.4480838632067366}, {'axis': 'valence', 'value': 0.35995}, {'axis': 'tempo', 'value': 0.4303185979684576}], [{'axis': 'danceability', 'value': 0.58465}, {'axis': 'energy', 'value': 0.7542}, {'axis': 'loudness', 'value': 0.882063069255886}, {'axis': 'valence', 'value': 0.72105}, {'axis': 'tempo', 'value': 0.5813314454691259}], [{'axis': 'danceability', 'value': 0.67225}, {'axis': 'energy', 'value': 0.78715}, {'axis': 'loudness', 'value': 0.8260268087300224}, {'axis': 'valence', 'value': 0.16752499999999998}, {'axis': 'tempo', 'value': 0.44789620088211707}]]
+			RadarChart(".radarChart", data);
+		</script>
+
+
     </section>
     <footer>
         <p>Fecha de entrega: 05/07/2023, 8:00hs</p>

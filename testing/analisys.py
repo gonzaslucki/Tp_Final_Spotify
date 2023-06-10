@@ -1,15 +1,21 @@
 import pandas as pd
 
 # Load the csv file
-df = pd.read_csv('../data.csv')
+df = pd.read_csv('../data3.csv')
 
-# Calculate the mean for each user
-mean_df = df.groupby('user').mean().reset_index()
-# divide loudnes by 10
-mean_df['loudness'] = mean_df['loudness'] / 60
 
-# Print the result
-print(mean_df)
+# apply to every value of the df the formula (x-min(x))/(max(x)-min(x)). 
+# This will make the values of each column to be between 0 and 1
+df['tempo'] = df["tempo"].apply(lambda x: (x - min(df['tempo'])) / (max(df['tempo']) - min(df['tempo'])))
+df['loudness'] = df["loudness"].apply(lambda x: (x - min(df['loudness'])) / (max(df['loudness']) - min(df['loudness'])))
+mean_df = df.groupby('user').mean()
+
+
+
+
+# # Calculate the mean for each user
+# mean_df = df_norm.groupby('user').mean()
+
 
 result = []
 

@@ -6,22 +6,27 @@ const height = 1000;
 
 const color = d3.scaleOrdinal()
     .domain(['gonza', 'nico', 'flori'])
-    .range(['blue', 'green', 'black']);
+    .range(['blue', 'green', 'red']);
 
 const opacidad = d3.scaleLinear().range([.1, 1]);
 const radio = d3.scaleRadial().range([8, 80]);
 
 // Create a tooltip
-var Tooltip = d3.select("#visualization")
-    .append("div")
-    .style("opacity", 0)
-    .attr("class", "tooltip")
-    .style("background-color", "white")
-    .style("border", "solid")
-    .style("border-width", "2px")
-    .style("border-radius", "5px")
-    .style("padding", "5px")
-    .style("position", "absolute");  // <-- Add this line
+// var Tooltip = d3.select("#visualization")
+//     .append("div")
+//     .style("opacity", 0)
+//     .attr("class", "tooltip")
+//     .style("background-color", "white")
+//     .style("border", "solid")
+//     .style("border-width", "2px")
+//     .style("border-radius", "5px")
+//     .style("padding", "5px")
+//     .style("position", "absolute") // <-- Add this line
+//     .style("z-index", "10");
+
+let tooltip = d3.select("body").append("div")
+  .attr("class", "tooltip")
+  .style("opacity", 0);
 
 d3.csv('../data.csv', d3.autoType).then(data => {
     nodos = data;
@@ -74,20 +79,29 @@ function draw(chart, nodos) {
         .style('fill-opacity', d => opacidad(d.loudness))
         .on("mouseover", function(event, d) {
             console.log(d);
-            Tooltip
-                .style("opacity", 1)
-                .html('<u>' + d.song + '</u>' + "<br>" + "Danceability: " + d.danceability + "<br>" + "Loudness: " + d.loudness)
-                .style("left", (event.x+20) + "px")
-                .style("top", (event.y) + "px")
+            // Tooltip
+            //     .style("opacity", 1)
+            //     .html('<u>' + d.song + '</u>' + "<br>" + "Danceability: " + d.danceability + "<br>" + "Loudness: " + d.loudness)
+            //     .style("left", (event.x+20) + "px")
+            //     .style("top", (event.y) + "px")
+            tooltip.transition()
+        .duration(200)
+        .style("opacity", .9);
+      tooltip.html(d.song)
+        .style("left", (event.pageX) + "px")
+        .style("top", (event.pageY - 28) + "px");
         })
         .on("mousemove", function(event, d) {
-            Tooltip
+            tooltip
                 .style("left", (event.x+20) + "px")
                 .style("top", (event.y) + "px")
         })
         .on("mouseleave", function(d) {
-            Tooltip
-                .style("opacity", 0)
+            // Tooltip
+            //     .style("opacity", 0)
+            tooltip.transition()
+        .duration(500)
+        .style("opacity", 0);
         });
         
 
