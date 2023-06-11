@@ -39,12 +39,19 @@ h3 {
     color: #333;
 }
 
-p {
-   padding: 0 20px;
+
+p.intro{
+    padding: 0 180px;
 }
 
 section {
-    margin: 20px;
+    /* width: 80%; Sets the width to 80% of the parent element */
+    margin: 0 auto; /* Centers the container horizontally */
+    /* padding: 20px; Gives the content inside the container a 20px padding all around
+    background-color: #f5f5f5; /* Sets the background color to a light grey */
+    /* border-radius: 5px; Gives the container slightly rounded corners */ 
+    
+
 }
 
 .members {
@@ -84,7 +91,14 @@ footer {
     justify-content: center;
     align-items: center;
     height: 400px;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
+}
+.radarChart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    /* border: 1px solid #ccc; */
 }
 
 #buttons {
