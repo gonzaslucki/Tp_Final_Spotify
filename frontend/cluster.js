@@ -18,7 +18,7 @@ let tooltip = d3.select("#visualization").append("div")
 
 console.log(tooltip.node());
 
-d3.csv('../data3.csv', d3.autoType).then(data => {
+d3.csv('../data/data3.csv', d3.autoType).then(data => {
     nodos = data;
     opacidad.domain(d3.extent(nodos, d => d.energy));
     radio.domain(d3.extent(nodos, d => +d.danceability));
