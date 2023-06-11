@@ -38,7 +38,15 @@ def get_tracks_from_playlist(sp,playlist_id,amount):
         return ids,song_names
     else:
         raise Exception("Amount of songs is bigger than the amount of songs in the playlist")
-    
+
+# returns a list of genres from the artist that performed the song
+def get_genre_from_song_artist(sp,song_id):
+    # from the song id, get the genre from the artist that performed the song
+    artist_id = sp.track(song_id)['artists'][0]['id']
+    artist = sp.artist(artist_id)
+    return artist['genres']
+
+
 def get_features(sp,spotify_songs_ids):
     ids_dict_features = {'danceability': [], 'energy': [], 'key': [], 'loudness': [], 'mode': [], 'speechiness': [], 'acousticness': [], 'instrumentalness': [], 'liveness': [], 'valence': [], 'tempo': []}
     for id in spotify_songs_ids:
@@ -75,13 +83,16 @@ def main():
     song_names_final = []
     for user, playlist in playlists.items():
         ids, song_names = get_tracks_from_playlist(sp,playlist,20)
+        # genres = []
+        # for id in ids:
+        #     genres.append(get_genre_from_song_artist(sp,id))
+        # print(genres)
         features = get_features(sp,ids)
         desired_features = ['danceability', 'energy', 'loudness', 'valence', 'tempo']
         features = get_desired_features(features,desired_features)
         features['user'] = [user]*20
         features_final.append(features)
         song_names_final.append(song_names)
-    
     
     df_gonza = dataframe(song_names_final[1],features_final[1])
     df_nico = dataframe(song_names_final[0],features_final[0])
@@ -90,7 +101,6 @@ def main():
     print(df)
     # save as csv
     df.to_csv('data3.csv')
-    
 
 
 if __name__ == '__main__':
