@@ -10,7 +10,7 @@ const color = d3.scaleOrdinal()
 
 const opacidad = d3.scaleLinear().range([.05, 1]);
 const radio = d3.scaleRadial().range([8, 80]);
-const strokeWidth = d3.scaleLinear().range([3, 10]); // added this line
+const strokeWidth = d3.scaleLinear().range([1, 10]); // added this line
 
 let tooltip = d3.select("#visualization").append("div")
   .attr("class", "tooltiptest")
@@ -31,6 +31,30 @@ d3.csv('../data/data3.csv', d3.autoType).then(data => {
 
     createSimulation(nodos);
     draw(chart, nodos);
+
+    // const legend = svg.append("g")
+    //     .attr("font-family", "sans-serif")
+    //     .attr("font-size", 10)
+    //     .attr("text-anchor", "end")
+    //     .selectAll("g")
+    //     .data(color.domain().slice().reverse())
+    //     .join("g")
+    //     .attr("transform", (d, i) => `translate(-50,${i * 20})`);
+
+    // // Draw legend colored rectangles
+    // legend.append("rect")
+    //     .attr("x", width - 19)
+    //     .attr("width", 19)
+    //     .attr("height", 19)
+    //     .attr("fill", color);
+
+    // // Draw legend text
+    // legend.append("text")
+    //     .attr("x", width - 24)
+    //     .attr("y", 9.5)
+    //     .attr("dy", "0.32em")
+    //     .text(d => d);
+
 });
 
 function update(user) {
