@@ -9,9 +9,9 @@
     <script src="./scripts/radarChart.js"></script>
 </head>
 <body>
+
     <header>
-        <h1>Proyecto Final Spotify</h1>
-       
+        <h1 class="title">Proyecto Final Spotify</h1>
     </header>
     <section>
         <p class="intro">
@@ -21,37 +21,52 @@
             <div class="member">
                <!-- background color green of the image-->
                <!-- make the image smaller -->
-                <img style="background-color: #1dd95d;" src="../img/nico.png" alt="Member 1">
+                <img style="background-color: #0bba45;" src="../img/nico.png" alt="Member 1">
 
-                <h2>Nicolas C.</h2>
-                <p>Melodic Techno</p>
+                <h2>Nicolas Cantarovici</h2>
+                <p class="genre">Melodic Techno</p>
+                <iframe style="border-radius:12px; " src="https://open.spotify.com/embed/playlist/37i9dQZF1DX9gPDOAK0Yqv?utm_source=generator&theme=0" width="275px" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>                
+                <!-- <button onclick="update('nico')">Nico</button> -->
             </div>
             <div class="member">
                  <!-- background color blue of the image-->
                 <img style="background-color: #1d4fd9;" src="../img/gonza.png" alt="Member 2">
-                <h2>Gonzalo S.</h2>
-                <p>Trap Argentino</p>
+                <h2>Gonzalo Slucki</h2>
+                <p class="genre">Rock Nacional</p>
+                <iframe style="border-radius:12px;" src="https://open.spotify.com/embed/playlist/42RzknAZ7lkhLhl057N86v?utm_source=generator&theme=0" width="275px" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <!-- <button onclick="update('gonza')">Gonza</button> -->
             </div>
             <div class="member">
                 <!-- background color red of the image-->
                 <img style="background-color: #d91d1d;" src="../img/flori.png" alt="Member 3">
-                <h2>Florian R.</h2>
-                <p>Rock Folclorico</p>
+                <h2>Florian Reyes</h2>
+                <p class="genre">Jazz</p>
+                <iframe style="border-radius:12px;" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXbITWG1ZJKYt?utm_source=generator&theme=0" width="275px" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <!-- <button onclick="update('flori')">Flori</button> -->
+
             </div>
         </div>
-        <div id="buttons">
+          <h1>Circular Packing</h1>
+          <div id="buttons">
             <button onclick="update('nico')">Nico</button>
-            <button onclick="update('flori')">Flori</button>
             <button onclick="update('gonza')">Gonza</button>
-            <button onclick="update('todos')">Todos</button>
+            <button onclick="update('flori')">Flori</button>
+            <!-- <button onclick="update('todos')">Todos</button> -->
           </div>
-    <div id="visualization" style="width: 100%; height: 100%;"></div>
+    <div id="visualization" style="width: 100%; height: 100%;">
+        <!-- <p id="message"></p> -->
+    </div>
+    <h1>Radar Chart</h1>
     <div class="radarChart"></div>
     <script>
 			var data = [[{'axis': 'danceability', 'value': 0.58465}, {'axis': 'energy', 'value': 0.7542}, {'axis': 'loudness', 'value': 0.882063069255886}, {'axis': 'valence', 'value': 0.72105}, {'axis': 'tempo', 'value': 0.5813314454691259}], [{'axis': 'danceability', 'value': 0.67225}, {'axis': 'energy', 'value': 0.78715}, {'axis': 'loudness', 'value': 0.8260268087300224}, {'axis': 'valence', 'value': 0.16752499999999998}, {'axis': 'tempo', 'value': 0.44789620088211707}], [{'axis': 'danceability', 'value': 0.49285000000000007}, {'axis': 'energy', 'value': 0.195473}, {'axis': 'loudness', 'value': 0.4480838632067366}, {'axis': 'valence', 'value': 0.35995}, {'axis': 'tempo', 'value': 0.4303185979684576}]]
 			RadarChart(".radarChart", data);
 		</script>
 
+    <script src="scripts/script.js"></script>
+    
+    <!-- <pre id="ascii-background"></pre>
+    <pre id="ascii-content"></pre> -->
 
     </section>
     <footer>

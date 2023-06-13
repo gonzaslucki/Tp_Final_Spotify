@@ -57,25 +57,49 @@ d3.csv('../data/data3.csv', d3.autoType).then(data => {
 
 });
 
+let selectedUsers = new Set();
+
 function update(user) {
-    let filtered;
-    if (user === 'todos') {
-        filtered = nodos;
+    // If the user is already selected, remove it from the selection
+    // Otherwise, add it to the selection
+    if (selectedUsers.has(user)) {
+        selectedUsers.delete(user);
     } else {
-        filtered = nodos.filter(d => d.user === user);
+        selectedUsers.add(user);
+    }
+
+    let filtered;
+    if (selectedUsers.size === 0) {
+        filtered = nodos;
+        // displayMessage('Click any name to see a cluster');
+    } else {
+        filtered = nodos.filter(d => selectedUsers.has(d.user));
+        // hideMessage();
     }
     createSimulation(filtered);
     draw(chart, filtered);
+    
 }
+
+function displayMessage(message) {
+    d3.select('#message').text(message);
+}
+
+function hideMessage() {
+    d3.select('#message').text('');
+}
+
+
+
 
 function createSimulation(nodos) {
     sim = d3.forceSimulation(nodos)
-        .force('manybody', d3.forceManyBody().strength(200))
+        .force('manybody', d3.forceManyBody().strength(400))
         .force('center', d3.forceCenter())
         .force('y', d3.forceY().strength(0.1))
         .force('x', d3.forceX().strength(0.01))
         // .force('collide', d3.forceCollide(d => radio(+d.danceability) + 1).strength(2).iterations(5))
-        .force('collide', d3.forceCollide(d => radio(+d.danceability) +2).strength(2).iterations(5)) // added stroke width here
+        .force('collide', d3.forceCollide(d => radio(+d.danceability) +2).strength(1).iterations(5)) // added stroke width here
         .on('tick', redraw);
 }
 
@@ -102,7 +126,7 @@ function draw(chart, nodos) {
             tooltip.transition()
                 .duration(200)
                 .style("opacity", .9);
-            tooltip.html(d.song + '<br/>' + '<br/>' + 'Danceability:' + d.danceability + '<br/>' + 'Energy:' + d.energy + '<br/>' + 'Valence:' + d.valence)
+            tooltip.html('<b>'+d.song+'</b>' + '<br/>' + '<br/>' + 'Danceability:' + d.danceability + '<br/>' + 'Energy:' + d.energy + '<br/>' + 'Valence:' + d.valence)
                 .style("left", (event.pageX) + "px")
                 .style("top", (event.pageY - 28) + "px");
         })

@@ -103,9 +103,11 @@ function RadarChart(id, data) {
         .attr("x", 4)
         .attr("y", (d) => -d * (radius / cfg.levels))
         .attr("dy", "0.4em")
-        .style("font-size", "10px")
+        .style("font-size", "12px")
+        .style("font-weight", "bold")
+        .style("font-family", 'Courier New')
         .attr("fill", "#737373")
-        .text((d, i) => formatPercent(maxValue * (d / cfg.levels))); // Updated formatting function
+        .text((d, i) => formatPercent(maxValue * (d / cfg.levels)))// Updated formatting function
 
     const axis = axisGrid.selectAll(".axis").data(allAxis).enter().append("g").attr("class", "axis");
 
@@ -122,7 +124,9 @@ function RadarChart(id, data) {
     axis
         .append("text")
         .attr("class", "legend")
-        .style("font-size", "11px")
+        .style("font-size", "16px")
+        .style("font-weight", "bold")
+        .style("font-family", 'Courier New')
         .attr("text-anchor", "middle")
         .attr("dy", "0.35em")
         .attr("x", (d, i) => rScale(maxValue * cfg.labelFactor) * Math.cos(angleSlice * i - Math.PI / 2))
