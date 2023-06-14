@@ -6,7 +6,6 @@
     <title>Proyecto Final Integrador - Spotify: Ensayo visual con datos</title>
     <link rel="stylesheet" type="text/css" href="./styles/style.css">
     <script src="https://d3js.org/d3.v7.js"></script>
-    <script src="./scripts/radarChart.js"></script>
 </head>
 <body>
 
@@ -48,9 +47,9 @@
         </div>
           <h1>Circular Packing</h1>
           <div id="buttons">
-            <button id="nico" style="background-color:black" onclick="buttonClick('nico')">Nico</button>
-            <button id="gonza" style="background-color:black" onclick="buttonClick('gonza')">Gonza</button>
-            <button id="flori" style="background-color:black" onclick="buttonClick('flori')">Flori</button>
+            <button id="nico" style="background-color:black" onclick="buttonClick('nico');buttonClick_RC('nico')">Nico</button>
+            <button id="gonza" style="background-color:black" onclick="buttonClick('gonza');buttonClick_RC('gonza')">Gonza</button>
+            <button id="flori" style="background-color:black" onclick="buttonClick('flori');buttonClick_RC('flori')">Flori</button>
         </div>
         
     <div id="visualization" style="width: 100%; height: 100%;">
@@ -58,12 +57,9 @@
     </div>
     <h1>Radar Chart</h1>
     <div class="radarChart"></div>
-    <script>
-			var data = [[{'axis': 'danceability', 'value': 0.58465}, {'axis': 'energy', 'value': 0.7542}, {'axis': 'loudness', 'value': 0.882063069255886}, {'axis': 'valence', 'value': 0.72105}, {'axis': 'tempo', 'value': 0.5813314454691259}], [{'axis': 'danceability', 'value': 0.67225}, {'axis': 'energy', 'value': 0.78715}, {'axis': 'loudness', 'value': 0.8260268087300224}, {'axis': 'valence', 'value': 0.16752499999999998}, {'axis': 'tempo', 'value': 0.44789620088211707}], [{'axis': 'danceability', 'value': 0.49285000000000007}, {'axis': 'energy', 'value': 0.195473}, {'axis': 'loudness', 'value': 0.4480838632067366}, {'axis': 'valence', 'value': 0.35995}, {'axis': 'tempo', 'value': 0.4303185979684576}]]
-			RadarChart(".radarChart", data);
-		</script>
 
     <script src="scripts/script.js"></script>
+    <script src="./scripts/radarChart.js"></script>
     
     <!-- <pre id="ascii-background"></pre>
     <pre id="ascii-content"></pre> -->

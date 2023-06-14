@@ -112,7 +112,7 @@ function createSimulation(nodos) {
         .force('y', d3.forceY().strength(0.1))
         .force('x', d3.forceX().strength(0.01))
         // .force('collide', d3.forceCollide(d => radio(+d.danceability) + 1).strength(2).iterations(5))
-        .force('collide', d3.forceCollide(d => radio(+d.danceability) +2).strength(1).iterations(5)) // added stroke width here
+        .force('collide', d3.forceCollide(d => radio(+d.danceability) +2).strength(1).iterations(10)) // added stroke width here
         .on('tick', redraw);
 }
 

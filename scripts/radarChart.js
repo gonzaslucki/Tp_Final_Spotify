@@ -1,4 +1,37 @@
-function RadarChart(id, data) {
+var gonza = [{'axis': 'danceability', 'value': 0.58465}, {'axis': 'energy', 'value': 0.7542}, {'axis': 'loudness', 'value': 0.882063069255886}, {'axis': 'valence', 'value': 0.72105}, {'axis': 'tempo', 'value': 0.5813314454691259}];
+var nico = [{'axis': 'danceability', 'value': 0.67225}, {'axis': 'energy', 'value': 0.78715}, {'axis': 'loudness', 'value': 0.8260268087300224}, {'axis': 'valence', 'value': 0.16752499999999998}, {'axis': 'tempo', 'value': 0.44789620088211707}];
+var flori = [{'axis': 'danceability', 'value': 0.49285000000000007}, {'axis': 'energy', 'value': 0.195473}, {'axis': 'loudness', 'value': 0.4480838632067366}, {'axis': 'valence', 'value': 0.35995}, {'axis': 'tempo', 'value': 0.4303185979684576}];
+			var allData = {
+                'gonza': {'active': true, 'data': gonza, 'color': 'blue'},
+  'nico': {'active': true, 'data': nico, 'color': 'green'},
+  'flori': {'active': true, 'data': flori, 'color': 'red'}
+};
+
+function buttonClick_RC(buttonId) {
+  allData[buttonId].active = !allData[buttonId].active;  // Toggle active state
+  
+  // Build data and color arrays with only active data
+  var data = [];
+  var colors = [];
+  for (var key in allData) {
+    if (allData[key].active) {
+      data.push(allData[key].data);
+      colors.push(allData[key].color);
+    }
+  }
+
+  
+  RadarChart(".radarChart", data, colors);  // Pass colors to RadarChart function
+}
+
+// Initial draw
+var data = [gonza, nico, flori];
+var colors = ['blue', 'green', 'red'];
+RadarChart(".radarChart", data, colors);  // Pass colors to RadarChart function
+
+
+
+function RadarChart(id, data,colors) {
 
 
     const margin = { top: 100, right: 100, bottom: 100, left: 100 };
@@ -7,7 +40,7 @@ function RadarChart(id, data) {
 
     const color = d3.scaleOrdinal()
     // .domain(['gonza', 'nico', 'flori'])
-    .range(["blue", "green", "red"]);
+    .range(colors);
 
     const options = {
         w: width,
