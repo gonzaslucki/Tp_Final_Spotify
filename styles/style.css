@@ -154,7 +154,7 @@ button {
     transition-duration: 0.4s;
     cursor: pointer;
     border-radius: 8px;
-    width: 275px;
+    width: 180px;
     font-family: "clash-display-regular";
     font-weight: 500;
 }
@@ -209,4 +209,10 @@ button:hover {
     text-align: center;
     font-size: 1.2em;
     margin-top: 20px;
+}
+
+.clicked {
+    background-color: gray;
+    color: black;
+    border: 2px solid #101010;
 }

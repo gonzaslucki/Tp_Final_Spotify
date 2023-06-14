@@ -17,7 +17,7 @@ window.onload = function() {
        _______________________________________________________________________`,
     ];
 
-    setInterval(playFrames, 1000 / 6); // This will play 2 frames per second
+    // setInterval(playFrames, 1000 / 6); // This will play 2 frames per second
 
     function playFrames() {
         if (frames.length > 0) {

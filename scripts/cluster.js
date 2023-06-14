@@ -57,38 +57,51 @@ d3.csv('../data/data3.csv', d3.autoType).then(data => {
 
 });
 
-let selectedUsers = new Set();
-
-function update(user) {
-    // If the user is already selected, remove it from the selection
-    // Otherwise, add it to the selection
+function buttonClick(user) {
     if (selectedUsers.has(user)) {
+        // Trying to deselect the user
+        if (selectedUsers.size === 1) {
+            // Prevent deselecting if it's the last selected user
+            return;
+        }
         selectedUsers.delete(user);
+        document.getElementById(user).style.backgroundColor = "gray";
     } else {
+        // Selecting the user
         selectedUsers.add(user);
+        document.getElementById(user).style.backgroundColor = "black";
     }
 
-    let filtered;
-    if (selectedUsers.size === 0) {
-        filtered = nodos;
-        // displayMessage('Click any name to see a cluster');
-    } else {
-        filtered = nodos.filter(d => selectedUsers.has(d.user));
-        // hideMessage();
-    }
+    let filtered = nodos.filter(d => selectedUsers.has(d.user));
     createSimulation(filtered);
     draw(chart, filtered);
+}
+
+
+
+let selectedUsers = new Set(['nico', 'gonza', 'flori']);
+
+// function update(user) {
+//     // If the user is already selected, remove it from the selection
+//     // Otherwise, add it to the selection
+//     if (selectedUsers.has(user)) {
+//         selectedUsers.delete(user);
+//     } else {
+//         selectedUsers.add(user);
+//     }
+
+//     let filtered;
+//     if (selectedUsers.size === 0) {
+//         filtered = nodos;
+//         // displayMessage('Click any name to see a cluster');
+//     } else {
+//         filtered = nodos.filter(d => selectedUsers.has(d.user));
+//         // hideMessage();
+//     }
+//     createSimulation(filtered);
+//     draw(chart, filtered);
     
-}
-
-function displayMessage(message) {
-    d3.select('#message').text(message);
-}
-
-function hideMessage() {
-    d3.select('#message').text('');
-}
-
+// }
 
 
 
