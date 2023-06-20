@@ -25,21 +25,21 @@ var allData = {
   flori: { active: true, data: flori, color: "#6C9BCF" },
 };
 
-function buttonClick_RC(buttonId) {
-  allData[buttonId].active = !allData[buttonId].active; // Toggle active state
+// function buttonClick_RC(buttonId) {
+//   allData[buttonId].active = !allData[buttonId].active; // Toggle active state
 
-  // Build data and color arrays with only active data
-  var data = [];
-  var colors = [];
-  for (var key in allData) {
-    if (allData[key].active) {
-      data.push(allData[key].data);
-      colors.push(allData[key].color);
-    }
-  }
+//   // Build data and color arrays with only active data
+//   var data = [];
+//   var colors = [];
+//   for (var key in allData) {
+//     if (allData[key].active) {
+//       data.push(allData[key].data);
+//       colors.push(allData[key].color);
+//     }
+//   }
 
-  RadarChart(".radarChart", data, colors); // Pass colors to RadarChart function
-}
+//   RadarChart(".radarChart", data, colors); // Pass colors to RadarChart function
+// }
 
 // Initial draw
 var data = [gonza, nico, flori];
