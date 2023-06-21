@@ -29,7 +29,8 @@ header {
 body header h1.title{
     font-family: 'clash-display-medium', sans-serif;
     font-size: 4.2rem;
-    margin: 30px 0
+    margin: 30px 0;
+    margin-top: 70px;
 }
 
 body h1{
@@ -167,7 +168,7 @@ div.radarChart{
     gap: 100px;
     width: 100%;
     margin-bottom: 0px;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 button {
@@ -380,4 +381,23 @@ button:hover {
 }
 .highlight.show {
   opacity: 1;
+}
+
+/* legend */
+#legend {
+  display: none;
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  z-index: 0;
+  width: 120px;
+}
+
+#legend-cluster{
+  display: none;
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  z-index: 0;
+  width: 200px;
 }

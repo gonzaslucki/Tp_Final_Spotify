@@ -32,7 +32,6 @@
                <!-- background color green of the image-->
                <!-- make the image smaller -->
                 <img style="background-color: #fc4f00;" src="../img/nico.png" alt="Member 1">
-
                 <h2>Nicolas Cantarovici</h2>
                 <p class="genre">Melodic Techno</p>
                 <iframe style="border-radius:12px; " src="https://open.spotify.com/embed/playlist/37i9dQZF1DX9gPDOAK0Yqv?utm_source=generator&theme=0" width="350px" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>                
@@ -58,9 +57,41 @@
 
         </div>
         <hr>
-
+        <img id="legend" src="./img/legend_names2.png" alt="Legend">
+        <!-- <img id="legend-cluster" src="img/legend_cluster.png" alt="Legend Cluster"> -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const legend = document.getElementById('legend');
+                const legendCluster = document.getElementById('legend-cluster');
+                const hr = document.getElementsByTagName('hr')[1]; // get the second <hr>
+                const visualizationDiv = document.getElementById('visualization');
+        
+                window.addEventListener('scroll', function() {
+                    const hrPos = hr.getBoundingClientRect();
+                    const visPos = visualizationDiv.getBoundingClientRect();
+                    
+                    // Show the legend for plots
+                    if (hrPos.top < 0) { 
+                        legend.style.display = 'block';
+                    } else { 
+                        legend.style.display = 'none';
+                    }
+        
+                    // Show the legend for cluster when both second <hr> and #visualization are in view
+                    if (hrPos.top < 0 && visPos.bottom > 0) {
+                        legendCluster.style.display = 'block';
+                    } else {
+                        legendCluster.style.display = 'none';
+                    }
+                });
+            });
+        </script>
+        
+        
+        
           <h1>Nube Musical</h1>
           <p class = "nube-bajada">En esta nube de canciones se pueden ver las 20 canciones preferidas de cada uno de los integrantes. Al clickear un nombre, se eliminarán las canciones de ese integrante y se mostrarán las del resto.</p>
+          <p class="nube-bajada"><b>Danceability</b>: Tamaño - <b>Energy</b>: Opacidad - <b>Valence</b>: StrokeWidth</p>
           <div id="buttons">
             <button id="nico" style="background-color:black" onclick="buttonClick('nico');buttonClick_RC('nico')">Nico</button>
             <button id="gonza" style="background-color:black" onclick="buttonClick('gonza');buttonClick_RC('gonza')">Gonza</button>
@@ -91,8 +122,8 @@
 
     <div class="carousel">
         <div class="carousel-images">
-          <img src="./img/nico_cassetes.png" class="carousel-image">
           <img src="./img/gonza_cassetes.png" class="carousel-image">
+          <img src="./img/nico_cassetes.png" class="carousel-image">
           <img src="./img/flor_cassetes.png" class="carousel-image">
           <!-- more images as needed -->
         </div>
