@@ -2,7 +2,7 @@ let nodos;
 let chart;
 let sim;
 const width = 1500;
-const height = 1000;
+const height = 900;
 
 const color = d3
   .scaleOrdinal()
@@ -10,7 +10,7 @@ const color = d3
   .range(["#8b1874", "#fc4f00", "#6C9BCF"]);
 
 const opacidad = d3.scaleLinear().range([0.05, 1]);
-const radio = d3.scaleRadial().range([6.4, 64]);
+const radio = d3.scaleRadial().range([8, 64]);
 const strokeWidth = d3.scaleLinear().range([1, 10]); // added this line
 
 let tooltip = d3
@@ -152,14 +152,13 @@ function draw(chart, nodos) {
             d.song +
             "</b>" +
             "<br/>" +
-            "<br/>" +
-            "Danceability:" +
+            "D:" +
             d.danceability +
             "<br/>" +
-            "Energy:" +
+            "E:" +
             d.energy +
             "<br/>" +
-            "Valence:" +
+            "V:" +
             d.valence
         )
         .style("left", event.pageX + "px")
