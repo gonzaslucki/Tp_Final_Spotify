@@ -106,23 +106,29 @@ let selectedUsers = new Set(["nico", "gonza", "flori"]);
 //     draw(chart, filtered);
 
 // }
-
 function createSimulation(nodos) {
-  sim = d3
-    .forceSimulation(nodos)
-    .force("manybody", d3.forceManyBody().strength(400))
-    .force("center", d3.forceCenter())
-    .force("y", d3.forceY().strength(0.1))
-    .force("x", d3.forceX().strength(0.01))
-    // .force('collide', d3.forceCollide(d => radio(+d.danceability) + 1).strength(2).iterations(5))
-    .force(
-      "collide",
-      d3
-        .forceCollide((d) => radio(+d.danceability) + 2)
-        .strength(1)
-        .iterations(10)
-    ) // added stroke width here
-    .on("tick", redraw);
+  if (!sim) {
+    // Create simulation if it doesn't exist
+    sim = d3
+      .forceSimulation(nodos)
+      .force("manybody", d3.forceManyBody().strength(400))
+      .force("center", d3.forceCenter())
+      .force("y", d3.forceY().strength(0.1))
+      .force("x", d3.forceX().strength(0.01))
+      .force(
+        "collide",
+        d3
+          .forceCollide((d) => radio(+d.danceability) + 2)
+          .strength(1)
+          .iterations(10)
+      )
+      .on("tick", redraw);
+  } else {
+    // Stop the old simulation and assign new nodes
+    sim.stop();
+    sim.nodes(nodos);
+    sim.alpha(1).restart();
+  }
 }
 
 function draw(chart, nodos) {
@@ -130,9 +136,12 @@ function draw(chart, nodos) {
 
   const sessions = chart
     .selectAll("g.session")
-    .data(nodos)
-    .join("g")
-    .attr("class", "session")
+    .data(nodos, d => d.id)  // use a unique identifier for each data
+    .join(
+      enter => enter.append("g").attr("class", "session"),
+      update => update,
+      exit => exit.remove()
+    )
     .attr("transform", (d) => `translate(${[d.x, d.y]})`);
 
   sessions
