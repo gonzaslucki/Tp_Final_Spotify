@@ -88,7 +88,7 @@ def main():
         #     genres.append(get_genre_from_song_artist(sp,id))
         # print(genres)
         features = get_features(sp,ids)
-        desired_features = ['danceability', 'energy', 'loudness', 'valence', 'tempo']
+        desired_features = ['danceability', 'energy', 'loudness', 'valence', 'tempo', 'acousticness']
         features = get_desired_features(features,desired_features)
         features['user'] = [user]*20
         features_final.append(features)
@@ -100,7 +100,7 @@ def main():
     df = pd.concat([df_gonza,df_nico,df_flori])
     print(df)
     # save as csv
-    df.to_csv('data3.csv')
+    df.to_csv('data4.csv')
 
 
 if __name__ == '__main__':

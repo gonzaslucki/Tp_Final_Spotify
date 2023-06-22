@@ -1,24 +1,6 @@
-var gonza = [
-  { axis: "danceability", value: 0.58465 },
-  { axis: "energy", value: 0.7542 },
-  { axis: "loudness", value: 0.882063069255886 },
-  { axis: "valence", value: 0.72105 },
-  { axis: "tempo", value: 0.5813314454691259 },
-];
-var nico = [
-  { axis: "danceability", value: 0.67225 },
-  { axis: "energy", value: 0.78715 },
-  { axis: "loudness", value: 0.8260268087300224 },
-  { axis: "valence", value: 0.16752499999999998 },
-  { axis: "tempo", value: 0.44789620088211707 },
-];
-var flori = [
-  { axis: "danceability", value: 0.49285000000000007 },
-  { axis: "energy", value: 0.195473 },
-  { axis: "loudness", value: 0.4480838632067366 },
-  { axis: "valence", value: 0.35995 },
-  { axis: "tempo", value: 0.4303185979684576 },
-];
+var gonza = [{'axis': 'danceability', 'value': 0.58465}, {'axis': 'energy', 'value': 0.7542}, {'axis': 'loudness', 'value': 0.882063069255886}, {'axis': 'valence', 'value': 0.72105}, {'axis': 'tempo', 'value': 0.5813314454691259}, {'axis': 'acousticness', 'value': 0.069595005}];
+var nico = [{'axis': 'danceability', 'value': 0.6521}, {'axis': 'energy', 'value': 0.80285}, {'axis': 'loudness', 'value': 0.8196575872142982}, {'axis': 'valence', 'value': 0.18328}, {'axis': 'tempo', 'value': 0.44782310879444004}, {'axis': 'acousticness', 'value': 0.045038}];
+var flori = [{'axis': 'danceability', 'value': 0.49284999999999995}, {'axis': 'energy', 'value': 0.195473}, {'axis': 'loudness', 'value': 0.4480838632067366}, {'axis': 'valence', 'value': 0.35995}, {'axis': 'tempo', 'value': 0.4303185979684576}, {'axis': 'acousticness', 'value': 0.8272}];
 var allData = {
   gonza: { active: true, data: gonza, color: "#8b1874" },
   nico: { active: true, data: nico, color: "#fc4f00" },

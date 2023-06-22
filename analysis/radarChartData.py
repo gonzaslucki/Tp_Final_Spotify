@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Load the csv file
-df = pd.read_csv('../data3.csv')
+df = pd.read_csv('../data/data4.csv')
 
 
 # apply to every value of the df the formula (x-min(x))/(max(x)-min(x)). 
