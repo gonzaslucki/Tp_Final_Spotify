@@ -29,8 +29,7 @@ header {
 body header h1.title{
     font-family: 'clash-display-medium', sans-serif;
     font-size: 4.2rem;
-    margin: 30px 0;
-    margin-top: 70px;
+    margin-top: 30px;
 }
 
 body h1{
@@ -91,6 +90,7 @@ section {
     margin: 30px 60px;
 }
 
+
 .member img {
     width: 250px;
     height: 250px;
@@ -98,12 +98,10 @@ section {
     border-radius: 50%;
     margin-bottom: 10px;
     transition: transform 0.5s;
-    /* user-select: none;
-    pointer-events: none; */
 }
 
 .member img:hover {
-    transform: scale(1.05);
+    transform: scale(1.06);
     transition: transform 0.5s;
 }
 
