@@ -13,8 +13,7 @@ The goal of this project is to explore and analyze data from Spotify, a popular 
 ### Contributors
 This project was developed by:
 
-Gonzalo Slucki
-Florian Reyes
-Nicolas Cantarovici
-Please feel free to reach out to us if you have any questions or suggestions regarding this project.
+- Gonzalo Slucki
+- Florian Reyes
+- Nicolas Cantarovici
 
